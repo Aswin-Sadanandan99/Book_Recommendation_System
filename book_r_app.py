@@ -25,19 +25,27 @@ selected_movie = st.selectbox('Type or select Books',book_list)
 if st.button('Show Recommendation'):
     st.write('These are the Books Recommended as per your Preference')
     suggestion = recommender(selected_movie)
-    col1, col2, col3, col4, col5 = st.columns(5)
+    col1, div1, col2, div2, col3, div3, col4, div4, col5 = st.columns([1,0.02,1,0.02,1,0.02,1,0.02,1])
     with col1:
         st.subheader(suggestion[0])
         st.image(suggestion[1])
+    with div1:
+        st.markdown('|')
     with col2:
         st.subheader(suggestion[2])
         st.image(suggestion[3])
+    with div2:
+        st.markdown('|')
     with col3:
         st.subheader(suggestion[4])
         st.image(suggestion[5])
+    with div3:
+        st.markdown('|')
     with col4:
         st.subheader(suggestion[6])
         st.image(suggestion[7])
+    with div4:
+        st.markdown('|')
     with col5:
         st.subheader(suggestion[8])
-        st.image(suggestion[9])
+         st.image(suggestion[9])
