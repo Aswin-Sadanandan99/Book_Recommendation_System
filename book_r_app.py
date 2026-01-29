@@ -48,4 +48,5 @@ if st.button('Show Recommendation'):
         st.markdown('|')
     with col5:
         st.subheader(suggestion[8])
-         st.image(suggestion[9])
+        st.image(suggestion[9])
+
