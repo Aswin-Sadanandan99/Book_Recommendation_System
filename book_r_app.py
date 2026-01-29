@@ -27,17 +27,17 @@ if st.button('Show Recommendation'):
     suggestion = recommender(selected_movie)
     col1, col2, col3, col4, col5 = st.columns(5)
     with col1:
-        st.text(suggestion[0])
+        st.subheader(suggestion[0])
         st.image(suggestion[1])
     with col2:
-        st.text(suggestion[2])
+        st.subheader(suggestion[2])
         st.image(suggestion[3])
     with col3:
-        st.text(suggestion[4])
+        st.subheader(suggestion[4])
         st.image(suggestion[5])
     with col4:
-        st.text(suggestion[6])
+        st.subheader(suggestion[6])
         st.image(suggestion[7])
     with col5:
-        st.text(suggestion[8])
+        st.subheader(suggestion[8])
         st.image(suggestion[9])
