@@ -20,10 +20,11 @@ def recommender(book_name):
         suggestion.append(pivot.index[x[0]])
         suggestion.append(book['Image-URL-M'][(book['Book-Title'] == pivot.index[x[0]]) & (book['Book-Rating'] == book['Book-Rating'].max())].values[0])
     return suggestion
-
+st.title(':violet[Book Recommendation]')
+st.subheader('This system will suggest 5 books by analysing the searched book user ratings and their prefrences.')
 selected_movie = st.selectbox('Type or select Books',book_list)
 if st.button('Show Recommendation'):
-    st.write('These are the Books Recommended as per your Preference')
+    st.write('These are the Books that you might like: ')
     suggestion = recommender(selected_movie)
     col1, div1, col2, div2, col3, div3, col4, div4, col5 = st.columns([1,0.02,1,0.02,1,0.02,1,0.02,1])
     with col1:
@@ -49,4 +50,5 @@ if st.button('Show Recommendation'):
     with col5:
         st.subheader(suggestion[8])
         st.image(suggestion[9])
+
 
